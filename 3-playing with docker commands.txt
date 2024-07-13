@@ -1,0 +1,135 @@
+PS C:\Users\ymoro> docker container run -p 5000:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+357ded2a333b88ab224d3a13c6ab25b59d02a7b37b8e1f881e41c0ba1e9534c5
+docker: Error response from daemon: driver failed programming external connectivity on endpoint serene_jemison (eeb2ac2b434931b291fbe9cb5b263a321e0e63cfe3dde1ec94eab7e8f186bf51): Bind for 0.0.0.0:5000 failed: port is already allocated.
+PS C:\Users\ymoro> docker container run -p 5100:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+7492c01bbbae9391294d2ad7e14abbf8094ef86b62b8330f45d1ffcd8e6ae9a1
+PS C:\Users\ymoro> docker top 7492
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                3537                3516                99                  09:11               ?                   00:00:19            java -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+PS C:\Users\ymoro> docker stats 7492
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.07%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.07%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.07%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.15%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.15%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.16%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.16%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.22%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.22%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.22%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.07%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.07%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.09%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+7492c01bbbae   pensive_borg   0.10%     458.2MiB / 7.682GiB   5.83%     746B / 0B   0B / 0B     38
+CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT     MEM %     NET I/O     BLOCK I/O   PIDS
+
+
+
+PS C:\Users\ymoro> docker container run -p 5200:5000 -m 512m --cpu-quota 10000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+31a2dc96a028c62e081afca1c45ca4c2db6d7797ffb2c6e3d5407bcc301cbd16
+PS C:\Users\ymoro> docker container logs -f 31a2d
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.0.RELEASE)
+
+2024-07-12 09:18:31.306  INFO 1 --- [           main] c.i.r.w.r.RestfulWebServicesApplication  : Starting RestfulWebServicesApplication v1.0.0.RELEASE on 31a2dc96a028 with PID 1 (/app.jar started by root in /)
+2024-07-12 09:18:31.308  INFO 1 --- [           main] c.i.r.w.r.RestfulWebServicesApplication  : No active profile set, falling back to default profiles: default
+2024-07-12 09:18:52.905  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-12 09:18:53.905  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 993ms. Found 1 repository interfaces.
+2024-07-12 09:19:01.613  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e29499aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+PS C:\Users\ymoro> docker container run -p 5200:5000 -m 512m --cpu-quota 50000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+f5f3f741a0315918897dad42ef12e13f21a463fa714ceec88ff361f91187a632
+docker: Error response from daemon: driver failed programming external connectivity on endpoint funny_taussig (6026b2d9c1dc55cc2b6c918236dff079179968b2e710b990eb0aa40826c800be): Bind for 0.0.0.0:5200 failed: port is already allocated.
+PS C:\Users\ymoro> docker container stop 31a2d
+31a2d
+PS C:\Users\ymoro> docker container run -p 5200:5000 -m 512m --cpu-quota 50000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+30478990a71b0ac3f02c03040bec7122740be87e362d15b6067520ee4257e24e
+PS C:\Users\ymoro> docker container logs -f 30478
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.0.RELEASE)
+
+2024-07-12 09:20:02.801  INFO 1 --- [           main] c.i.r.w.r.RestfulWebServicesApplication  : Starting RestfulWebServicesApplication v1.0.0.RELEASE on 30478990a71b with PID 1 (/app.jar started by root in /)
+2024-07-12 09:20:02.807  INFO 1 --- [           main] c.i.r.w.r.RestfulWebServicesApplication  : No active profile set, falling back to default profiles: default
+2024-07-12 09:20:06.915  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-12 09:20:07.120  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 200ms. Found 1 repository interfaces.
+2024-07-12 09:20:08.604  INFO 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fef2d6c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-12 09:20:10.318  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2024-07-12 09:20:10.519  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-12 09:20:10.600  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2024-07-12 09:20:10.614  INFO 1 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64/server:/usr/lib/jvm/java-1.8-openjdk/jre/lib/amd64:/usr/lib/jvm/java-1.8-openjdk/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2024-07-12 09:20:11.003  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-12 09:20:11.004  INFO 1 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7897 ms
+2024-07-12 09:20:11.115  INFO 1 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2024-07-12 09:20:11.116  INFO 1 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet webServlet mapped to [/h2-console/*]
+2024-07-12 09:20:11.202  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-07-12 09:20:11.202  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-07-12 09:20:11.202  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2024-07-12 09:20:11.203  INFO 1 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-07-12 09:20:11.624  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-12 09:20:12.122  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-12 09:20:12.406  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+        name: default
+        ...]
+2024-07-12 09:20:12.613  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2024-07-12 09:20:12.614  INFO 1 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2024-07-12 09:20:13.022  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+PS C:\Users\ymoro> docker system df
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          3         1         728.6MB   585.7MB (80%)
+Containers      7         3         0B        0B
+Local Volumes   11        7         98.3kB    0B (0%)
+Build Cache     0         0         0B        0B
+PS C:\Users\ymoro>

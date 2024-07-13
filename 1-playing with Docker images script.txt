@@ -1,0 +1,252 @@
+PS C:\Users\ymoro> docker container ls
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED         STATUS         PORTS                    NAMES
+803be5baf639   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   3 minutes ago   Up 3 minutes   0.0.0.0:5000->5000/tcp   interesting_ptolemy
+PS C:\Users\ymoro> docker run -p 5001:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+dabec9e94cb27868251afc841ff82af49900796417336cb467ee9e706d243d5e
+PS C:\Users\ymoro> docker container ls
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED         STATUS         PORTS                    NAMES
+dabec9e94cb2   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   9 seconds ago   Up 8 seconds   0.0.0.0:5001->5000/tcp   eager_rubin
+803be5baf639   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   5 minutes ago   Up 5 minutes   0.0.0.0:5000->5000/tcp   interesting_ptolemy
+PS C:\Users\ymoro> docker images
+REPOSITORY                 TAG             IMAGE ID       CREATED         SIZE
+hello-world                latest          d2c94e258dcb   14 months ago   13.3kB
+in28min/todo-rest-api-h2   1.0.0.RELEASE   9d05dd98f4a4   2 years ago     143MB
+PS C:\Users\ymoro> docker container ls -a
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS                        PORTS                    NAMES
+dabec9e94cb2   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   2 minutes ago    Up 2 minutes                  0.0.0.0:5001->5000/tcp   eager_rubin
+803be5baf639   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   8 minutes ago    Up 8 minutes                  0.0.0.0:5000->5000/tcp   interesting_ptolemy
+c0db81916b8a   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   12 minutes ago   Exited (130) 10 minutes ago                            vigilant_bhabha
+f51a5c058af3   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   17 minutes ago   Exited (130) 15 minutes ago                            wizardly_ritchie
+e6389ee0fad3   hello-world                              "/hello"                 25 minutes ago   Exited (0) 25 minutes ago                              gifted_heisenberg
+PS C:\Users\ymoro> docker container stop dabec
+dabec
+PS C:\Users\ymoro> docker container stop 803b
+803b
+PS C:\Users\ymoro> docker container ls -a
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS                        PORTS     NAMES
+dabec9e94cb2   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   3 minutes ago    Exited (143) 23 seconds ago             eager_rubin
+803be5baf639   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   9 minutes ago    Exited (143) 4 seconds ago              interesting_ptolemy
+c0db81916b8a   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   13 minutes ago   Exited (130) 11 minutes ago             vigilant_bhabha
+f51a5c058af3   in28min/todo-rest-api-h2:1.0.0.RELEASE   "sh -c 'java $JAVA_O…"   18 minutes ago   Exited (130) 16 minutes ago             wizardly_ritchie
+e6389ee0fad3   hello-world                              "/hello"                 26 minutes ago   Exited (0) 26 minutes ago               gifted_heisenberg
+PS C:\Users\ymoro> docker images
+REPOSITORY                 TAG             IMAGE ID       CREATED         SIZE
+hello-world                latest          d2c94e258dcb   14 months ago   13.3kB
+in28min/todo-rest-api-h2   1.0.0.RELEASE   9d05dd98f4a4   2 years ago     143MB
+PS C:\Users\ymoro> docker in28min/todo-rest-api-h2:1.0.0.RELEASE in28min/todo-rest-api-h2:2.0.0.RELEASE
+docker: 'in28min/todo-rest-api-h2:1.0.0.RELEASE' is not a docker command.
+See 'docker --help'
+PS C:\Users\ymoro> docker tag in28min/todo-rest-api-h2:1.0.0.RELEASE in28min/todo-rest-api-h2:2.0.0.RELEASE
+PS C:\Users\ymoro> docker images
+REPOSITORY                 TAG             IMAGE ID       CREATED         SIZE
+hello-world                latest          d2c94e258dcb   14 months ago   13.3kB
+in28min/todo-rest-api-h2   1.0.0.RELEASE   9d05dd98f4a4   2 years ago     143MB
+in28min/todo-rest-api-h2   2.0.0.RELEASE   9d05dd98f4a4   2 years ago     143MB
+PS C:\Users\ymoro> docker pull mysql
+Using default tag: latest
+latest: Pulling from library/mysql
+d9a40b27c30f: Pull complete
+d948328c7651: Pull complete
+c1e267313ede: Pull complete
+7478f013875a: Pull complete
+9221a2250289: Pull complete
+d1f57baa52d5: Pull complete
+35c3d30e8624: Pull complete
+3d4d1dd0cca6: Pull complete
+08bfe3f7d1c5: Pull complete
+537e7daeeea3: Pull complete
+Digest: sha256:72a37ddc9f839cfd84f1f6815fb31ba26f37f4c200b90e49607797480e3be446
+Status: Downloaded newer image for mysql:latest
+docker.io/library/mysql:latest
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview mysql
+PS C:\Users\ymoro> docker search mysql
+NAME                                    DESCRIPTION                                     STARS     OFFICIAL
+mysql                                   MySQL is a widely used, open-source relation…   15219     [OK]
+mariadb                                 MariaDB Server is a high performing open sou…   5789      [OK]
+phpmyadmin                              phpMyAdmin - A web interface for MySQL and M…   1004      [OK]
+percona                                 Percona Server is a fork of the MySQL relati…   629       [OK]
+circleci/mysql                          MySQL is a widely used, open-source relation…   30
+bitnami/mysql                           Bitnami container image for MySQL               113
+cimg/mysql                                                                              3
+bitnami/mysqld-exporter                 Bitnami container image for MySQL Server Exp…   7
+ubuntu/mysql                            MySQL open source fast, stable, multi-thread…   64
+bitnamicharts/mysql                                                                     0
+rapidfort/mysql                         RapidFort optimized, hardened image for MySQL   25
+google/mysql                            MySQL server for Google Compute Engine          25
+elestio/mysql                           Mysql, verified and packaged by Elestio         0
+airbyte/source-mysql                                                                    0
+airbyte/normalization-mysql                                                             0
+rapidfort/mysql8-ib                     RapidFort optimized, hardened image for MySQ…   9
+newrelic/k8s-nri-mysql                  New Relic Infrastructure MySQL Integration (…   0
+rapidfort/mysql-official                RapidFort optimized, hardened image for MySQ…   9
+hashicorp/mysql-portworx-demo                                                           0
+bitnami/percona-mysql                   Bitnami container image for Percona MySQL       0
+airbyte/destination-mysql                                                               0
+newrelic/mysql-plugin                   New Relic Plugin for monitoring MySQL databa…   1
+percona/percona-server-mysql-operator                                                   0
+linuxserver/mysql                       A Mysql container, brought to you by LinuxSe…   41
+airbyte/source-mysql-strict-encrypt                                                     0
+PS C:\Users\ymoro> docker search hello-world
+NAME                                   DESCRIPTION                                     STARS     OFFICIAL
+hello-world                            Hello World! (an example of minimal Dockeriz…   2276      [OK]
+rancher/hello-world                    This container image is no longer maintained…   6
+okteto/hello-world                                                                     0
+garystafford/hello-world               Simple hello-world Spring Boot service for t…   0
+etapau/hello-world                     k8s hello-world app                             0
+wxia6256/hello-world                   hello-world                                     0
+ebenjaminv9/hello-world                Hello-world                                     0
+tayal13/hello-world                    hello-world                                     0
+mbrainar/hello-world                   Python-based hello-world web service            0
+wouterm/helloworld                      A simple Docker image with an Nginx server …   1
+boxboat/hello-world                    https://gitlab.com/boxboat/hello-world          1
+layint/hello-world                     hello-world image cached for system CI tests    0
+clnperez/hello-world                   multi-arch hello-world image                    0
+raveena87/hello-world                  hello-world:latest                              1
+thomaspoignant/hello-world-rest-json   This project is a REST hello-world API to bu…   2
+wonderlic/hello-world                  hello-world                                     0
+yesimages/hello-world                  exercise java hello-world app                   1
+ingee/hello-nodejs                     simple nodejs hello-world web-server            0
+bletvaska/hello-world                  Funny alternative for official hello-world i…   0
+neoxsys/hello-world                    hello-world container based on Ubuntu 16.04.…   1
+souravpatnaik/hello-world-go           hello-world in Golang                           1
+tutum/hello-world                      Image to test docker deployments. Has Apache…   90
+maprangzth/hello-world                 Docker Hello-world!                             0
+markmnei/hello-world-java-docker       Hello-World-Java-docker                         1
+dockercloud/hello-world                Hello World!                                    20
+PS C:\Users\ymoro> docker image history mysql
+IMAGE          CREATED      CREATED BY                                      SIZE      COMMENT
+5cde95de907d   9 days ago   CMD ["mysqld"]                                  0B        buildkit.dockerfile.v0
+<missing>      9 days ago   EXPOSE map[3306/tcp:{} 33060/tcp:{}]            0B        buildkit.dockerfile.v0
+<missing>      9 days ago   ENTRYPOINT ["docker-entrypoint.sh"]             0B        buildkit.dockerfile.v0
+<missing>      9 days ago   COPY docker-entrypoint.sh /usr/local/bin/ # …   13.8kB    buildkit.dockerfile.v0
+<missing>      9 days ago   VOLUME [/var/lib/mysql]                         0B        buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eux;  microdnf install -…   314MB     buildkit.dockerfile.v0
+<missing>      9 days ago   ENV MYSQL_SHELL_VERSION=9.0.0-1.el9             0B        buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eu;  {   echo '[mysql-to…   226B      buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eux;  microdnf install -…   141MB     buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eu;  {   echo '[mysqlinn…   246B      buildkit.dockerfile.v0
+<missing>      9 days ago   ENV MYSQL_VERSION=9.0.0-1.el9                   0B        buildkit.dockerfile.v0
+<missing>      9 days ago   ENV MYSQL_MAJOR=innovation                      0B        buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eux;  key='BCA4 3417 C3B…   3.17kB    buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eux;  microdnf install -…   16.5MB    buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eux;  arch="$(uname -m)"…   2.36MB    buildkit.dockerfile.v0
+<missing>      9 days ago   ENV GOSU_VERSION=1.17                           0B        buildkit.dockerfile.v0
+<missing>      9 days ago   RUN /bin/sh -c set -eux;  groupadd --system …   2.77kB    buildkit.dockerfile.v0
+<missing>      9 days ago   /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B
+<missing>      9 days ago   /bin/sh -c #(nop) ADD file:61bb1ff5b435c8d45…   112MB
+PS C:\Users\ymoro> docker image history dabec9e94cb2
+Error response from daemon: No such image: dabec9e94cb2:latest
+PS C:\Users\ymoro> docker image history dabe
+Error response from daemon: No such image: dabe:latest
+PS C:\Users\ymoro> docker image inspect mysql
+[
+    {
+        "Id": "sha256:5cde95de907d193090219b5b825b60439321cca331fb63bad4e2441a4c9b5f7a",
+        "RepoTags": [
+            "mysql:latest"
+        ],
+        "RepoDigests": [
+            "mysql@sha256:72a37ddc9f839cfd84f1f6815fb31ba26f37f4c200b90e49607797480e3be446"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2024-07-02T09:20:08Z",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3306/tcp": {},
+                "33060/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.17",
+                "MYSQL_MAJOR=innovation",
+                "MYSQL_VERSION=9.0.0-1.el9",
+                "MYSQL_SHELL_VERSION=9.0.0-1.el9"
+            ],
+            "Cmd": [
+                "mysqld"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": {
+                "/var/lib/mysql": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 585654202,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/f5b4b69e9b1543f754e4df33d2b331fe02c604403739632b26e2522df55e1759/diff:/var/lib/docker/overlay2/64493e46f34be17e606f96584eef1907413a40b64ef7e04e81b31178b431aaf4/diff:/var/lib/docker/overlay2/b8f2a989e301cd75c6be8cfccb300d63a9b907fb3ccf2afdfbefeef9c70048d3/diff:/var/lib/docker/overlay2/e9b5d3504c7b46f6368afa7313b53e0c3a747bb323d8b9959d5de26f6e653e91/diff:/var/lib/docker/overlay2/9f23818d4c284c9eb7e465135eb0dad893555fdeb1df9827cf58bdd457759883/diff:/var/lib/docker/overlay2/a00afae4abb26956a90d5b74646b7a641b8b73d0229fb265ee6983f67889e0f9/diff:/var/lib/docker/overlay2/171a3f407cd1fdf4dab700527c33975c24f98930c79517938dc1489c6e967af1/diff:/var/lib/docker/overlay2/d976e29ff100df7899eef726d8042746bba1f4f8a5485bf282e1d31224077c52/diff:/var/lib/docker/overlay2/40b95f444e8408a88faf654fe79ec9073c74594fffd10bb9f5f771c88447b373/diff",
+                "MergedDir": "/var/lib/docker/overlay2/1854e334d5efd008d5636b48c6549903cdd075539628c27c4dfe817c81f3f046/merged",
+                "UpperDir": "/var/lib/docker/overlay2/1854e334d5efd008d5636b48c6549903cdd075539628c27c4dfe817c81f3f046/diff",
+                "WorkDir": "/var/lib/docker/overlay2/1854e334d5efd008d5636b48c6549903cdd075539628c27c4dfe817c81f3f046/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:2606c15a4838dfb909dab29f47c601a797f657f51a35005bd06d01da891d813c",
+                "sha256:c8a5e4117ee0fe52b94eb62e221e3cd52b2cd533e9d052c4d9b189b9cbf771f3",
+                "sha256:c20aa6b964263e66c36246c1c1272e420e6b85f8b1e1269f0e402dc6e55c0fe6",
+                "sha256:9b45b0011e6344fe185ad779ad4d34fd4d595b73d839f04aef6555efe35dfdd8",
+                "sha256:c8cf3846c7905bc4a1909b36ff2d196f3e75596336e7c49a4dcb12f01bdec06f",
+                "sha256:a7b1d9bb07cafde97588e04e04f330e4f20009d488bee9f0d21d7d38b971eedc",
+                "sha256:8fd90ef8e7a6b5f313b8e2307cdd4ed71e7bf32e7f85d82d1d5c29051fc15378",
+                "sha256:ccb0a0bb6359b96098b5acfb20b43e9916aaf1c6b0d3601a9645ec0e2b06f470",
+                "sha256:24e0bd61c6f70d0c7f188f06e25d8f8f96a26050034040392cfcaf9a182d24c7",
+                "sha256:2ca1c4e625aa6ebc9012f6a4318c3c30705e95490258e99f6448028f23d8c36a"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        },
+        "Container": ""
+    }
+]
+PS C:\Users\ymoro> docker image remove hello-world
+Error response from daemon: conflict: unable to remove repository reference "hello-world" (must force) - container e6389ee0fad3 is using its referenced image d2c94e258dcb
+PS C:\Users\ymoro> docker image remove e6389ee
+Error response from daemon: No such image: e6389ee:latest
+PS C:\Users\ymoro> docker image remove e6389ee0fad3
+Error response from daemon: No such image: e6389ee0fad3:latest
+PS C:\Users\ymoro>
